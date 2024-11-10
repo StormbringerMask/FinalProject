@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seasons of Giving</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wheel">
+    <div class="season spring" onclick="showSeason('spring')">Spring</div>
+    <div class="season summer" onclick="showSeason('summer')">Summer</div>
+    <div class="season autumn" onclick="showSeason('autumn')">Autumn</div>
+    <div class="season winter" onclick="showSeason('winter')">Winter</div>
+  </div>
 
+  <div class="season-page" id="spring">
+    <h2>Spring Gift Card</h2>
+    <p>Celebrate new beginnings with blooming flowers!</p>
+    <button onclick="closeSeason()">Back</button>
+  </div>
+
+  <div class="season-page" id="summer">
+    <h2>Summer Gift Card</h2>
+    <p>Enjoy the warmth of summer with a sunny surprise!</p>
+    <button onclick="closeSeason()">Back</button>
+  </div>
+
+  <div class="season-page" id="autumn">
+    <h2>Autumn Gift Card</h2>
+    <p>Fall in love with the colors of autumn!</p>
+    <button onclick="closeSeason()">Back</button>
+  </div>
+
+  <div class="season-page" id="winter">
+    <h2>Winter Gift Card</h2>
+    <p>Cozy up with a frosty winter gift!</p>
+    <button onclick="closeSeason()">Back</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
