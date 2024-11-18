@@ -1,4 +1,3 @@
-/* Importing the special font */
 body {
   font-family: 'Edu AU VIC WA NT Pre', sans-serif;
   display: flex;
@@ -9,7 +8,6 @@ body {
   background-color: #f0f0f0;
 }
 
-/* Seasonal wheel grid layout */
 .wheel {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -31,30 +29,26 @@ body {
   transition: transform 0.3s ease;
 }
 
-/* Season colors and improved contrast */
 .season.spring {
-  background-color: #6FBF73; /* Softer green */
+  background-color: #6FBF73;
 }
 
 .season.summer {
-  background-color: #FFC107; /* Deep gold for better readability */
-  color: #333333; /* Darker text color for contrast */
+  background-color: #FFC107;
+  color: #333333;
 }
 
 .season.autumn {
-  background-color: #FF7043; /* Warmer autumn orange */
-}
+  background-color: #FF7043;
 
 .season.winter {
-  background-color: #29B6F6; /* Rich blue */
+  background-color: #29B6F6;
 }
 
-/* Hover effect for interactivity */
 .season:hover {
   transform: scale(1.1);
 }
 
-/* Modal-like season pages */
 .season-page {
   display: none;
   position: fixed;
