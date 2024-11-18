@@ -1,4 +1,4 @@
-body {
+`body {
   font-family: 'Playfair Display', serif;
   display: flex;
   justify-content: center;
@@ -24,7 +24,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 4vw;
+  font-size: 3vw;
   color: white;
   cursor: pointer;
   border-radius: 10px;
@@ -82,7 +82,7 @@ body {
 
 .season-page h2 {
   margin-bottom: 10px;
-  font-size: 2em;
+  font-size: 1em;
   max-width: 90%;
   word-wrap: break-word;
 }
