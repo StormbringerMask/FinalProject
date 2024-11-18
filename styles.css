@@ -1,22 +1,21 @@
+/* Importing the special font */
 body {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Edu AU VIC WA NT Pre', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
   margin: 0;
   background-color: #f0f0f0;
-  padding: 20px;
-  box-sizing: border-box;
 }
 
+/* Seasonal wheel grid layout */
 .wheel {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-  width: 90vw;
-  max-width: 300px;
-  aspect-ratio: 1 / 1;
+  width: 300px;
+  height: 300px;
   position: relative;
 }
 
@@ -24,44 +23,38 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3vw;
+  font-size: 20px;
   color: white;
   cursor: pointer;
   border-radius: 10px;
+  padding: 20px;
   transition: transform 0.3s ease;
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  box-sizing: border-box;
 }
 
+/* Season colors and improved contrast */
 .season.spring {
-  background-color: #6FBF73;
-  color: #333333;
-  font-weight: bold;
+  background-color: #6FBF73; /* Softer green */
 }
 
 .season.summer {
-  background-color: #FFC107;
-  color: #333333;
-  font-weight: bold;
+  background-color: #FFC107; /* Deep gold for better readability */
+  color: #333333; /* Darker text color for contrast */
 }
 
 .season.autumn {
-  background-color: #FF7043;
-  color: #333333;
-  font-weight: bold;
+  background-color: #FF7043; /* Warmer autumn orange */
 }
 
 .season.winter {
-  background-color: #29B6F6;
-  color: #333333;
-  font-weight: bold;
+  background-color: #29B6F6; /* Rich blue */
 }
 
+/* Hover effect for interactivity */
 .season:hover {
   transform: scale(1.1);
 }
 
+/* Modal-like season pages */
 .season-page {
   display: none;
   position: fixed;
@@ -71,28 +64,15 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.85);
   color: white;
-  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
-  padding: 20px;
-  box-sizing: border-box;
 }
 
 .season-page h2 {
   margin-bottom: 10px;
-  font-size: 1em;
-  max-width: 90%;
-  word-wrap: break-word;
-}
-
-.season-page img {
-  max-width: 80%;
-  height: auto;
-  max-height: 60vh;
-  margin-top: 20px;
-  border-radius: 10px;
+  font-size: 2em;
 }
 
 button {
