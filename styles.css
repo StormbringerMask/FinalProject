@@ -3,17 +3,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
   background-color: #f0f0f0;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .wheel {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-  width: 300px;
-  height: 300px;
+  width: 90vw;
+  max-width: 300px;
+  height: 90vw;
+  max-height: 300px;
   position: relative;
 }
 
@@ -21,11 +25,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 4vw;
   color: white;
   cursor: pointer;
   border-radius: 10px;
-  padding: 20px;
+  padding: 5vw;
   transition: transform 0.3s ease;
 }
 
@@ -66,15 +70,28 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.85);
   color: white;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .season-page h2 {
   margin-bottom: 10px;
   font-size: 2em;
+  max-width: 90%;
+  word-wrap: break-word;
+}
+
+.season-page img {
+  max-width: 80%;
+  height: auto;
+  max-height: 60vh;
+  margin-top: 20px;
+  border-radius: 10px;
 }
 
 button {
