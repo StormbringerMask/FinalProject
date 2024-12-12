@@ -3,48 +3,55 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seasons of Giving</title>
+    <title>Vertical Timeline Hub</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="wheel">
-      <div class="season spring" onclick="showSeason('spring')">Spring</div>
-      <div class="season summer" onclick="showSeason('summer')">Summer</div>
-      <div class="season autumn" onclick="showSeason('autumn')">Autumn</div>
-      <div class="season winter" onclick="showSeason('winter')">Winter</div>
+    <div class="timeline">
+      <div class="timeline-indicator" id="timeline-indicator"></div>
     </div>
-  
-    <div class="season-page" id="spring">
-      <h2>Spring Gift Card</h2>
-      <p>Sakura flowers!</p>
-      <img src="spring.png" alt="Spring" width = "537rem" height = "343rem">
-      <button onclick="closeSeason()">Back</button>
+    <div class="container">
+
+      <section class="section" id="title-section">
+        <h1>Seasonal Giftcards</h1>
+        <p>Your gateway to seasonal delights!</p>
+      </section>
+
+      <section class="section" id="why-section">
+        <h2>Why We Need This Hub</h2>
+        <p>The gift cards we sell at the hub are boring; face it some random pattern and a logo is just terrible. That's why I propose we have special designs for the seasons. I've done at least 48 hours of lab time at the hub and I've only seen 1 person buy gift cards. With these designs, the gift cards are more lively making them perfect for gifting. I've seen time and time again students begging friends to buy them stuff at the hub, so giving them a gift card for a special occasion would be perfect. Most teachers at this school also enjoy the coffee made by the hub, so giving them a fun lively gift card would be also perfect for thanking them.</p>
+      </section>
+
+      <section class="section" id="prototypes-section">
+        <h2>Prototypes</h2>
+        <div class="wheel">
+          <div class="season spring" onclick="showSeason('spring')">Spring</div>
+          <div class="season summer" onclick="showSeason('summer')">Summer</div>
+          <div class="season autumn" onclick="showSeason('autumn')">Autumn</div>
+          <div class="season winter" onclick="showSeason('winter')">Winter</div>
+        </div>
+      </section>
+
+      <section class="section" id="buying-section">
+        <h2>Buying Options</h2>
+        <div class="buying-panels">
+          <div class="panel">
+            <h3>Buy From vendor</h3>
+            <p>Blah Blah Blah</p>
+            <button>Learn More</button>
+          </div>
+          <div class="panel">
+            <h3>Visa</h3>
+            <p>Blah Blah Blah</p>
+            <button>Learn More</button>
+          </div>
+        </div>
+      </section>
     </div>
-  
-    <div class="season-page" id="summer">
-      <h2>Summer Gift Card</h2>
-      <p>A nice day at the beach!</p>
-      <img src="summer.png" alt="Summer" width = "537rem" height = "343rem">
-      <button onclick="closeSeason()">Back</button>
-    </div>
-  
-    <div class="season-page" id="autumn">
-      <h2>Fall/Autumn</h2>
-      <p>Fall Spirt(Pumpkin Spice Of Course!)</p>
-      <img src="fall.png" alt="Fall" width = "537rem" height = "343rem">
-      <button onclick="closeSeason()">Back</button>
-    </div>
-  
-    <div class="season-page" id="winter">
-      <h2>Winter Gift Card</h2>
-      <p>A nice snowy day isn't complete without hot chocolate</p>
-      <img src="winter.png" alt="Winter" width = "537rem" height = "343rem">
-      <button onclick="closeSeason()">Back</button>
-    </div>
-  
+
     <script src="script.js"></script>
   </body>
 </html>
