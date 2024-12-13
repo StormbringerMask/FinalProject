@@ -34,12 +34,11 @@ function initializePage() {
   const sections = document.querySelectorAll('.section');
   sections.forEach(section => section.classList.add('visible'));
   for (let i = 0; i < 30; i++) {
-    setTimeout(createPetals(), i * 200);
+    setTimeout(createPetals, i * 200);
   }
 }
 
 window.addEventListener('scroll', () => {
-  showVisibleSections();
   createPetals();
 });
 
