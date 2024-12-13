@@ -10,37 +10,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="scroll-container">
-      <div class="scroll-content">
-        <div class="scroll-section">
-          <h2>Title</h2>
-          <p>Introduction to the product and why it's important.</p>
-        </div>
-        
-        <div class="scroll-section">
-          <h2>Why We Need the Product at the Hub</h2>
-          <p>Details about the product's necessity in the hub environment.</p>
-        </div>
-        
-        <div class="scroll-section">
-          <h2>Prototypes</h2>
-          <p>Information about various prototypes of the product.</p>
-        </div>
-        
-        <div class="scroll-section">
-          <h2>Buying Options</h2>
-          <div class="buy-panel">
-            <h3>Option 1</h3>
-            <p>Details and description for buying option 1.</p>
-          </div>
-          <div class="buy-panel">
-            <h3>Option 2</h3>
-            <p>Details and description for buying option 2.</p>
-          </div>
-        </div>
-      </div>
+    <div class="wheel">
+      <div class="season spring" onclick="showSeason('spring')">Spring</div>
+      <div class="season summer" onclick="showSeason('summer')">Summer</div>
+      <div class="season autumn" onclick="showSeason('autumn')">Autumn</div>
+      <div class="season winter" onclick="showSeason('winter')">Winter</div>
     </div>
-    
+  
+    <div class="season-page" id="spring">
+      <h2>Spring Gift Card</h2>
+      <p>Sakura flowers!</p>
+      <img src="spring.png" alt="Spring" width = "537rem" height = "343rem">
+      <button onclick="closeSeason()">Back</button>
+    </div>
+  
+    <div class="season-page" id="summer">
+      <h2>Summer Gift Card</h2>
+      <p>A nice day at the beach!</p>
+      <img src="summer.png" alt="Summer" width = "537rem" height = "343rem">
+      <button onclick="closeSeason()">Back</button>
+    </div>
+  
+    <div class="season-page" id="autumn">
+      <h2>Fall/Autumn</h2>
+      <p>Fall Spirt(Pumpkin Spice Of Course!)</p>
+      <img src="fall.png" alt="Fall" width = "537rem" height = "343rem">
+      <button onclick="closeSeason()">Back</button>
+    </div>
+  
+    <div class="season-page" id="winter">
+      <h2>Winter Gift Card</h2>
+      <p>A nice snowy day isn't complete without hot chocolate</p>
+      <img src="winter.png" alt="Winter" width = "537rem" height = "343rem">
+      <button onclick="closeSeason()">Back</button>
+    </div>
+  
     <script src="script.js"></script>
   </body>
 </html>
