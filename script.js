@@ -16,6 +16,7 @@ function createPetals() {
   petal.style.animationDuration = `${3 + Math.random() * 2}s`;
   document.body.appendChild(petal);
   setTimeout(() => petal.remove(), 5000);
+  debug.log("You're dumb")
 }
 
 function showVisibleSections() {
