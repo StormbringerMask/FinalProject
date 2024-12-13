@@ -6,6 +6,7 @@ function closeSeason() {
   const seasonPages = document.querySelectorAll('.season-page');
   seasonPages.forEach(page => {
     page.style.display = 'none';
+  }
 });
 
 function createPetals() {
