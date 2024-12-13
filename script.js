@@ -1,8 +1,5 @@
 function showSeason(season) {
-  const seasonPage = document.getElementById(season);
-  if (seasonPage) {
-    seasonPage.style.display = 'flex';
-  }
+  document.getElementById(season).style.display = 'flex';
 }
 
 function closeSeason() {
@@ -12,23 +9,7 @@ function closeSeason() {
   });
 }
 
-const container = document.querySelector('.container');
-const indicator = document.getElementById('timeline-indicator');
-
-container.addEventListener('scroll', () => {
-  const scrollPosition = container.scrollTop;
-  const totalHeight = container.scrollHeight - container.offsetHeight;
-  const scrollPercentage = scrollPosition / totalHeight;
-  indicator.style.top = `${scrollPercentage * 100}%`;
+document.querySelectorAll('.section').forEach((section, index) => {
+  section.style.scrollSnapType = 'y mandatory';
+  section.style.scrollBehavior = 'smooth';
 });
-
-const container = document.querySelector('.container');
-const indicator = document.getElementById('timeline-indicator');
-
-container.addEventListener('scroll', () => {
-  const scrollPosition = container.scrollTop;
-  const totalHeight = container.scrollHeight - container.offsetHeight;
-  const scrollPercentage = scrollPosition / totalHeight;
-  indicator.style.top = `${scrollPercentage * 100}%`;
-});
-
