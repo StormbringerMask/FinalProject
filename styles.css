@@ -140,7 +140,7 @@ button {
   position: absolute;
   width: 20px;
   height: 20px;
-  background-image: url('sakura.png');
+  background-image: url('sakura.gif');
   background-size: cover;
   animation: fall 5s linear infinite;
 }
