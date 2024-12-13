@@ -126,3 +126,44 @@ button {
   font-family: 'Edu AU VIC WA NT Pre', sans-serif;
   font-weight: 700;
 }
+
+.petal {
+  position: fixed;
+  top: -50px;
+  width: 20px;
+  height: 20px;
+  background-color: pink;
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: fall 5s linear infinite, sway 1.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes sway {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(30px);
+  }
+}
+
+.section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
