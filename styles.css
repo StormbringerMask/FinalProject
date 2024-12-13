@@ -1,12 +1,7 @@
 body {
-  font-family: 'Playfair Display', serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   margin: 0;
   overflow-y: hidden;
-  background-color: #f0f0f0;
+  font-family: 'Playfair Display', serif;
 }
 
 .timeline {
@@ -26,6 +21,16 @@ body {
   align-items: center;
   text-align: center;
   width: 100%;
+  flex-direction: column;
+  padding: 20px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+h2 {
+  margin-bottom: 20px;
 }
 
 .buying-panels {
@@ -40,7 +45,6 @@ body {
   border-radius: 10px;
   width: 40%;
 }
-
 
 .wheel {
   display: grid;
@@ -104,11 +108,6 @@ body {
   align-items: center;
   flex-direction: column;
   text-align: center;
-}
-
-.season-page h2 {
-  margin-bottom: 10px;
-  font-size: 2em;
 }
 
 button {
