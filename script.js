@@ -17,7 +17,7 @@ function createPetals() {
   setTimeout(() => petal.remove(), 5000);
 }
 
-function handleScroll() {
+function showVisibleSections() {
   const sections = document.querySelectorAll('.section');
   const scrollTop = window.scrollY + window.innerHeight / 2;
   sections.forEach(section => {
@@ -25,11 +25,24 @@ function handleScroll() {
     const sectionBottom = sectionTop + section.offsetHeight;
     if (scrollTop >= sectionTop && scrollTop < sectionBottom) {
       section.classList.add('visible');
-      createPetals();
-    } else {
-      section.classList.remove('visible');
     }
   });
 }
 
-window.addEventListener('scroll', handleScroll);
+function initializePage() {
+  const sections = document.querySelectorAll('.section');
+  sections.forEach(section => section.classList.add('visible'));
+  for (let i = 0; i < 30; i++) {
+    setTimeout(createPetals, i * 200);
+  }
+}
+
+window.addEventListener('scroll', () => {
+  showVisibleSections();
+  createPetals();
+});
+
+window.addEventListener('load', () => {
+  initializePage();
+  showVisibleSections();
+});
