@@ -28,13 +28,35 @@
       <section class="section" id="prototypes-section">
         <h2>Prototypes</h2>
         <div class="wheel">
-          <div class="season spring" onclick="showSeason('spring')">Spring</div>
-          <div class="season summer" onclick="showSeason('summer')">Summer</div>
-          <div class="season autumn" onclick="showSeason('autumn')">Autumn</div>
-          <div class="season winter" onclick="showSeason('winter')">Winter</div>
+          <div class="season-page" id="spring">
+            <h2>Spring Gift Card</h2>
+            <p>Sakura flowers!</p>
+            <img src="spring.png" alt="Spring" width="537" height="343">
+            <button onclick="closeSeason()">Back</button>
+          </div>
+          
+          <div class="season-page" id="summer">
+            <h2>Summer Gift Card</h2>
+            <p>A nice day at the beach!</p>
+            <img src="summer.png" alt="Summer" width="537" height="343">
+            <button onclick="closeSeason()">Back</button>
+          </div>
+          
+          <div class="season-page" id="autumn">
+            <h2>Fall/Autumn</h2>
+            <p>Fall Spirit (Pumpkin Spice Of Course!)</p>
+            <img src="fall.png" alt="Fall" width="537" height="343">
+            <button onclick="closeSeason()">Back</button>
+          </div>
+          
+          <div class="season-page" id="winter">
+            <h2>Winter Gift Card</h2>
+            <p>A nice snowy day isn't complete without hot chocolate.</p>
+            <img src="winter.png" alt="Winter" width="537" height="343">
+            <button onclick="closeSeason()">Back</button>
+          </div>
         </div>
       </section>
-
       <section class="section" id="buying-section">
         <h2>Buying Options</h2>
         <div class="buying-panels">
