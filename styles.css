@@ -11,12 +11,12 @@ body {
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
-  scrollbar-width: none; /* For Firefox */
-  -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none; 
 }
 
 .timeline::-webkit-scrollbar {
-  display: none; /* For Chrome, Safari, and Opera */
+  display: none;
 }
 
 .section {
@@ -125,4 +125,51 @@ button {
   margin-top: 20px;
   font-family: 'Edu AU VIC WA NT Pre', sans-serif;
   font-weight: 700;
+}
+.sakura-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sakura {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url('sakura.png');
+  background-size: cover;
+  animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.section {
+  scroll-snap-align: start;
+  flex: 0 0 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  flex-direction: column;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.section.active {
+  opacity: 1;
 }
