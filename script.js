@@ -8,31 +8,29 @@ function closeSeason() {
     page.style.display = 'none';
   });
 }
-document.addEventListener('scroll', () => {
+
+function createPetals() {
+  const petal = document.createElement('div');
+  petal.classList.add('petal');
+  petal.style.left = `${Math.random() * 100}vw`;
+  petal.style.animationDuration = `${3 + Math.random() * 2}s`; // Random duration
+  document.body.appendChild(petal);
+  setTimeout(() => petal.remove(), 5000); // Remove after animation
+}
+
+function handleScroll() {
   const sections = document.querySelectorAll('.section');
-  const sakuraContainer = document.querySelector('.sakura-container');
-  sections.forEach((section, index) => {
-    const rect = section.getBoundingClientRect();
-    if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-      section.classList.add('active');
-      generateSakura(sakuraContainer);
+  const scrollTop = window.scrollY + window.innerHeight / 2; // Middle of the viewport
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionBottom = sectionTop + section.offsetHeight;
+    if (scrollTop >= sectionTop && scrollTop < sectionBottom) {
+      section.classList.add('visible');
+      createPetals();
     } else {
-      section.classList.remove('active');
+      section.classList.remove('visible');
     }
   });
-});
-
-function generateSakura(container) {
-  for (let i = 0; i < 10; i++) {
-    const sakura = document.createElement('div');
-    sakura.classList.add('sakura');
-    sakura.style.left = `${Math.random() * 100}vw`;
-    sakura.style.animationDelay = `${Math.random() * 2}s`;
-    sakura.style.animationDuration = `${3 + Math.random() * 2}s`;
-    container.appendChild(sakura);
-
-    sakura.addEventListener('animationend', () => {
-      sakura.remove();
-    });
-  }
 }
+
+window.addEventListener('scroll', handleScroll);
