@@ -1,89 +1,89 @@
 body {
   font-family: 'Playfair Display', serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   margin: 0;
-  overflow: hidden; /* Hide the scrollbar */
+  background-color: #f0f0f0;
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-  height: 100vh;
-}
-
-.timeline {
-  width: 100px;
-  background-color: #f4f4f4;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-
-.timeline .dot {
-  width: 15px;
-  height: 15px;
-  background-color: #333;
-  border-radius: 50%;
-  margin: 20px 0;
-  cursor: pointer;
-}
-
-.timeline .dot.active {
-  background-color: #ff7043;
-}
-
-.sections {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-  scroll-snap-type: y mandatory;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* Internet Explorer */
-}
-
-.sections::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, and Opera */
-}
-
-.section {
-  height: 100vh;
-  scroll-snap-align: start;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  text-align: center;
-}
-
-.section h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-.section p {
-  font-size: 1.5rem;
-  max-width: 600px;
-}
-
-#prototypes img {
+.wheel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
   width: 300px;
-  height: auto;
-  margin: 10px;
+  height: 300px;
+  position: relative;
 }
 
-.buying-options {
+.season {
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 20px;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s ease;
 }
 
-.panel {
-  background-color: #f4f4f4;
-  padding: 20px;
-  border-radius: 10px;
-  width: 40%;
+.season.spring {
+  background-color: #6FBF73;
+  color: #333333;
+  font-weight: bold;
+}
+
+.season.summer {
+  background-color: #FFC107;
+  color: #333333;
+  font-weight: bold;
+}
+
+.season.autumn {
+  background-color: #FF7043;
+  color: #333333;
+  font-weight: bold;
+}
+
+.season.winter {
+  background-color: #29B6F6;
+  color: #333333;
+  font-weight: bold;
+}
+
+.season:hover {
+  transform: scale(1.1);
+}
+
+.season-page {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
+}
+
+.season-page h2 {
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+
+button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-family: 'Edu AU VIC WA NT Pre', sans-serif;
+  font-weight: 700;
 }
