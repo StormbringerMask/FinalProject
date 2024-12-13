@@ -8,9 +8,9 @@ function closeSeason() {
     page.style.display = 'none';
   });
 }
+
 const container = document.querySelector('.container');
 const indicator = document.getElementById('timeline-indicator');
-const sections = document.querySelectorAll('.section');
 
 container.addEventListener('scroll', () => {
   const scrollPosition = container.scrollTop;
@@ -18,3 +18,4 @@ container.addEventListener('scroll', () => {
   const scrollPercentage = scrollPosition / totalHeight;
   indicator.style.top = `${scrollPercentage * 100}%`;
 });
+
