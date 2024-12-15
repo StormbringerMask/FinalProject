@@ -167,8 +167,3 @@ button {
   opacity: 1;
   transform: translateY(0);
 }
-
-.section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
