@@ -21,21 +21,15 @@ function createPetals() {
 
 function showVisibleSections() {
   const sections = document.querySelectorAll('.section');
-  const windowHeight = window.innerHeight;
-
+  const scrollTop = window.scrollY + window.innerHeight / 2;
   sections.forEach(section => {
-    const rect = section.getBoundingClientRect();
-    const isVisible = rect.top <= windowHeight && rect.bottom >= 0;
-
-    if (isVisible) {
+    const sectionTop = section.offsetTop;
+    const sectionBottom = sectionTop + section.offsetHeight;
+    if (scrollTop >= sectionTop && scrollTop < sectionBottom) {
       section.classList.add('visible');
-    } else {
-      section.classList.remove('visible');
     }
   });
 }
-
-window.addEventListener('load', showVisibleSections);
 
 function initializePage() {
   const sections = document.querySelectorAll('.section');
@@ -44,3 +38,12 @@ function initializePage() {
     setTimeout(createPetals, i * 200);
   }
 }
+
+window.addEventListener('scroll', () => {
+  createPetals();
+});
+
+window.addEventListener('load', () => {
+  initializePage();
+  showVisibleSections();
+});
