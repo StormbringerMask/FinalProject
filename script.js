@@ -35,8 +35,6 @@ function showVisibleSections() {
   });
 }
 
-window.addEventListener('scroll', showVisibleSections);
-
 window.addEventListener('load', showVisibleSections);
 
 function initializePage() {
